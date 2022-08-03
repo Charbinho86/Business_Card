@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -36,12 +39,15 @@ android {
 
 dependencies {
 
-    implementation 'android.arch.lifecycle:livedata:1.1.1'
-    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
-    implementation 'android.arch.lifecycle:runtime:1.1.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.5.1'
 
+    implementation 'androidx.room:room-ktx:2.4.3'
     implementation 'androidx.room:room-runtime:2.4.3'
-    annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.12'
+    kapt 'androidx.room:room-compiler:2.4.3'
 
     implementation 'androidx.activity:activity-ktx:1.5.1'
 
